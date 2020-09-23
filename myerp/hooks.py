@@ -109,6 +109,12 @@ app_license = "MIT"
 # 	]
 # }
 
+fixtures = [
+    "Custom Field",
+    "DocTypes"
+    # add more here
+]
+
 # Testing
 # -------
 
