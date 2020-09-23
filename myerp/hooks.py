@@ -110,8 +110,7 @@ app_license = "MIT"
 # }
 
 fixtures = [
-    "Custom Field",
-    "DocTypes"
+   "DocType", "Custom Script", "Property Setter", "Print Format"
     # add more here
 ]
 
