@@ -37,6 +37,11 @@ app_license = "MIT"
 
 # Home Pages
 # ----------
+website_context = {
+	"favicon": 	"/assets/myerp/myerp/images/cs.png",
+	"splash_image": "/assets/myerp/myerp/images/cs.png"
+}
+
 
 # application home page (will override Website Settings)
 # home_page = "login"
