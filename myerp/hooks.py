@@ -10,6 +10,9 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "smthakor1979@gmail.com"
 app_license = "MIT"
+app_logo_url = '/assets/erpnext/images/cs_logo.png'
+
+
 
 # Includes in <head>
 # ------------------
