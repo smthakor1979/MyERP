@@ -41,9 +41,11 @@ app_logo_url = '/assets/erpnext/images/cs_logo.png'
 # Home Pages
 # ----------
 website_context = {
-	"favicon": 	"/assets/myerp/myerp/images/cs.png",
-	"splash_image": "/assets/myerp/myerp/images/cs.png"
+	"favicon": 	"/assets/myerp/images/cs_logo.png",
+	"splash_image": "/assets/myerp/images/cs_logo.png"
 }
+
+
 
 
 # application home page (will override Website Settings)

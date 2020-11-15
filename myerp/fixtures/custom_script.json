@@ -1,0 +1,46 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "BOM",
+  "modified": "2020-10-31 12:55:58.851284",
+  "name": "BOM-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('BOM Item', {\n   \n\tarea:function(frm,cdt,cdn){\n\t\tvar d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty) ;\n\t\t\n\t},\n\tlength:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty);\n\t},\n    width:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t},\n    pcs:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty);\n\t},\n    qty:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty) ;\n\t},\n});\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Sales Order",
+  "modified": "2020-10-02 02:35:03.585269",
+  "name": "Sales Order-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Sales Order Item', {\n\tarea:function(frm,cdt,cdn){\n\t\tvar d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t\t\n\t},\n\tlength1:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t},\n    width:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar area = (flt(d.length) * flt(d.width))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"area\", area);\n\t},\n    pcs:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty);\n\t},\n    qty:function(frm,cdt,cdn){\n        var d = locals[cdt][cdn];\n\t\tvar qty = (flt(d.area) * flt(d.pcs))  ;\n\t\tfrappe.model.set_value(cdt, cdn, \"qty\", qty);\n\t},\n});\n\t\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Quotation",
+  "modified": "2020-09-17 15:17:22.359104",
+  "name": "Quotation-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Quotation Item', {\n\tgst:function(frm,cdt,cdn){\n\t\tvar d = locals[cdt][cdn];\n\t\tvar gst_amount = (flt(d.qty) * flt(d.rate)) * flt(d.gst) / 100 ;\n\t\tfrappe.model.set_value(cdt, cdn, \"gst_amount\", gst_amount);\n\t\tvar total = (flt(d.qty) * flt(d.rate)) + flt (d.gst_amount);\n\t\tfrappe.model.set_value(cdt, cdn, 'total_amount', total);\n\t},\n\tqty:function(frm,cdt,cdn){\n\t\tvar d = locals[cdt][cdn];\n\t\tvar gst_amount = (flt(d.qty) * flt(d.rate)) * flt(d.gst) / 100 ;\n\t\tfrappe.model.set_value(cdt, cdn, \"gst_amount\", gst_amount);\n\t\tvar total = (flt(d.qty) * flt(d.rate)) + flt (d.gst_amount);\n\t\tfrappe.model.set_value(cdt, cdn, 'total_amount', total);\n\t},\n\trate:function(frm,cdt,cdn){\n\t\tvar d = locals[cdt][cdn];\n\t\tvar gst_amount = (flt(d.qty) * flt(d.rate)) * flt(d.gst) / 100 ;\n\t\tfrappe.model.set_value(cdt, cdn, \"gst_amount\", gst_amount);\n\t\tvar total = (flt(d.qty) * flt(d.rate)) + flt (d.gst_amount);\n\t\tfrappe.model.set_value(cdt, cdn, 'total_amount', total);\n\t}\n})"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Appraisal",
+  "modified": "2020-09-23 22:12:30.874315",
+  "name": "Appraisal-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on(\u201cAppraisal\u201d, {\r\n\r\nachievement_rating : function(frm,cdt,cdn){\r\n\r\n\tif(locals[cdt][cdn].achievement_rating != undefined ){\r\n\t\tvar c = locals[cdt][cdn].rating;\r\n\t\tc[0].weighted_score = cur_frm.doc.achievement_rating;\r\n\t\tcur_frm.refresh_field(\"rating\");\r\n\t}\r\n},\r\n\r\ntotal_supervisor:function(frm,cdt,cdn){\r\n\r\n\tif(locals[cdt][cdn].total_supervisor != undefined ){\r\n\t\tvar c = locals[cdt][cdn].rating;\r\n\t\tc[1].weighted_score = cur_frm.doc.total_supervisor;\r\n\t\tcur_frm.refresh_field(\"rating\");\r\n\t}\r\n}\r\n});"
+ }
+]
