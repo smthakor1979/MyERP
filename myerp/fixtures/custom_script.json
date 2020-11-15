@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Custom Script",
+  "dt": "Work Order",
+  "modified": "2020-11-10 03:36:22.587668",
+  "name": "Work Order-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Work Order Item', 'length',\n\tfunction(frm) {\n    frappe.call({\n        \"method\": \"frappe.client.get\",\n        args: {\n            doctype: \"Work Order Item\",\n            name: frm.doc.work_order_item\n        },\n        callback: function (data) {\n            frappe.model.set_value(frm.doctype,\n                frm.docname, \"Bom_item\",\n             data.message.length\n               )\n            \n        }\n    })\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
   "dt": "BOM",
   "modified": "2020-10-31 12:55:58.851284",
   "name": "BOM-Client",
