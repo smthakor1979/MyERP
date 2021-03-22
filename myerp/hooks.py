@@ -120,7 +120,7 @@ website_context = {
 # }
 
 fixtures = [
-   "DocType", "Custom Script","Custom Field", "Property Setter", "Print Format"
+    "Custom Script","Custom Field", "Property Setter", "Print Format"
     # add more here
 ]
 
